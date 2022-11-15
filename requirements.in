@@ -1,2 +1,0 @@
-flake8>=5.0
-apache-airflow>=2.4
