@@ -1,0 +1,10 @@
+-c requirements.txt
+black==22.10.0
+flake8-docstrings==1.6.0
+mypy==0.982
+pip-tools==6.9.0
+pylint==2.15.4
+pytest==7.1.3
+pytest-cov==4.0.0
+semgrep==0.117.0
+tox==4.0.0b2
