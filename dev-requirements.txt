@@ -6,78 +6,58 @@
 #
 astroid==2.12.12
     # via pylint
-attrs==21.4.0
+attrs==22.1.0
     # via
-    #   glom
-    #   jsonschema
+    #   -c requirements.txt
     #   pytest
-    #   semgrep
 black==22.10.0
     # via -r dev-requirements.in
-boltons==21.0.0
-    # via
-    #   face
-    #   glom
-    #   semgrep
-bracex==2.3.post1
-    # via wcmatch
 build==0.9.0
     # via pip-tools
 cachetools==5.2.0
     # via tox
-certifi==2022.9.24
-    # via requests
 chardet==5.0.0
     # via tox
-charset-normalizer==2.1.1
-    # via requests
 click==8.1.3
     # via
+    #   -c requirements.txt
     #   black
-    #   click-option-group
     #   pip-tools
-    #   semgrep
-click-option-group==0.5.5
-    # via semgrep
 colorama==0.4.6
     # via
+    #   -c requirements.txt
     #   build
     #   click
     #   pylint
     #   pytest
-    #   semgrep
     #   tox
-    #   tqdm
 coverage[toml]==6.5.0
     # via pytest-cov
-defusedxml==0.7.1
-    # via semgrep
 dill==0.3.6
-    # via pylint
+    # via
+    #   -c requirements.txt
+    #   pylint
 distlib==0.3.6
     # via virtualenv
-face==22.0.0
-    # via glom
 filelock==3.8.0
     # via virtualenv
 flake8==5.0.4
-    # via flake8-docstrings
+    # via
+    #   -c requirements.txt
+    #   flake8-docstrings
 flake8-docstrings==1.6.0
     # via -r dev-requirements.in
-glom==22.1.0
-    # via semgrep
-idna==3.4
-    # via requests
 iniconfig==1.1.1
     # via pytest
 isort==5.10.1
     # via pylint
-jsonschema==4.17.0
-    # via semgrep
 lazy-object-proxy==1.8.0
-    # via astroid
+    # via
+    #   -c requirements.txt
+    #   astroid
 mccabe==0.7.0
     # via
+    #   -c requirements.txt
     #   flake8
     #   pylint
 mypy==0.982
@@ -88,15 +68,15 @@ mypy-extensions==0.4.3
     #   mypy
 packaging==21.3
     # via
+    #   -c requirements.txt
     #   build
     #   pyproject-api
     #   pytest
-    #   semgrep
     #   tox
-pathspec==0.10.2
-    # via black
-peewee==3.15.4
-    # via semgrep
+pathspec==0.9.0
+    # via
+    #   -c requirements.txt
+    #   black
 pep517==0.13.0
     # via build
 pip-tools==6.9.0
@@ -109,39 +89,34 @@ platformdirs==2.5.4
     #   virtualenv
 pluggy==1.0.0
     # via
+    #   -c requirements.txt
     #   pytest
     #   tox
 py==1.11.0
     # via pytest
 pycodestyle==2.9.1
-    # via flake8
+    # via
+    #   -c requirements.txt
+    #   flake8
 pydocstyle==6.1.1
     # via flake8-docstrings
 pyflakes==2.5.0
-    # via flake8
+    # via
+    #   -c requirements.txt
+    #   flake8
 pylint==2.15.4
     # via -r dev-requirements.in
 pyparsing==3.0.9
-    # via packaging
+    # via
+    #   -c requirements.txt
+    #   packaging
 pyproject-api==1.1.2
     # via tox
-pyrsistent==0.19.2
-    # via jsonschema
 pytest==7.1.3
     # via
     #   -r dev-requirements.in
     #   pytest-cov
 pytest-cov==4.0.0
-    # via -r dev-requirements.in
-python-lsp-jsonrpc==1.0.0
-    # via semgrep
-requests==2.28.1
-    # via semgrep
-ruamel-yaml==0.17.21
-    # via semgrep
-ruamel-yaml-clib==0.2.7
-    # via ruamel-yaml
-semgrep==0.117.0
     # via -r dev-requirements.in
 snowballstemmer==2.2.0
     # via pydocstyle
@@ -151,36 +126,26 @@ tomli==2.0.1
     #   build
     #   coverage
     #   mypy
-    #   pep517
     #   pylint
     #   pyproject-api
     #   pytest
-    #   semgrep
     #   tox
 tomlkit==0.11.6
     # via pylint
 tox==4.0.0b2
     # via -r dev-requirements.in
-tqdm==4.64.1
-    # via semgrep
 typing-extensions==4.4.0
     # via
+    #   -c requirements.txt
     #   mypy
-    #   semgrep
-ujson==5.5.0
-    # via python-lsp-jsonrpc
-urllib3==1.26.12
-    # via
-    #   requests
-    #   semgrep
 virtualenv==20.16.7
     # via tox
-wcmatch==8.4.1
-    # via semgrep
 wheel==0.38.4
     # via pip-tools
 wrapt==1.14.1
-    # via astroid
+    # via
+    #   -c requirements.txt
+    #   astroid
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

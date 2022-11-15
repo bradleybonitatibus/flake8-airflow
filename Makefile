@@ -27,3 +27,6 @@ deps:
 	pip-compile
 	pip-compile -r dev-requirements.in
 	pip install -r requirements.txt -r dev-requirements.txt
+
+
+ci: clean deps lint test
