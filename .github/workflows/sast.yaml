@@ -1,0 +1,33 @@
+name: "Upload SARIF"
+
+on:
+  push:
+  schedule:
+    - cron: "30 10 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      # required for all workflows
+      security-events: write
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
+    steps:
+      # This step checks out a copy of your repository.
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - run: python -m pip install --upgrade setuptools pip tox==4.0.0b2 virtualenv
+      - run: tox -e security
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: results.sarif
+          # Optional category for the results
+          # Used to differentiate multiple results for one commit
+          category: my-analysis-tool
