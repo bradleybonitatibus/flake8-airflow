@@ -1,7 +1,8 @@
 # `flake8-airflow`
 
-An opinioned `flake8` plugin for Apache Airflow.
+[![CI](https://github.com/bradleybonitatibus/flake8-airflow/actions/workflows/ci.yaml/badge.svg)](https://github.com/bradleybonitatibus/flake8-airflow/actions/workflows/ci.yaml)
 
+An opinioned `flake8` plugin for Apache Airflow.
 
 ## Rules
 
