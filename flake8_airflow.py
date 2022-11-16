@@ -50,6 +50,7 @@ class Visitor(ast.NodeVisitor):
             self.errors.append(
                 (node.lineno, node.col_offset, AA102),
             )
+        self.generic_visit(node)
 
     def visit_Call(self, node: ast.Call) -> None:
         """Visits an ast.Call.
@@ -64,9 +65,10 @@ class Visitor(ast.NodeVisitor):
         if n.id == "DAG":
             kw: List[ast.keyword] = node.keywords
             for k in kw:
-                if "default_args" in k.arg:
-                    if not contains_key(k.value.keys, "retries"):
-                        self.errors.append((k.lineno, node.col_offset, AA103))
+                if "default_args" in k.arg and not contains_key(
+                    k.value.keys, "retries"
+                ):
+                    self.errors.append((k.lineno, node.col_offset, AA103))
 
         self.generic_visit(node)
 
