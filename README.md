@@ -1,8 +1,16 @@
 # `flake8-airflow`
 
 [![CI](https://github.com/bradleybonitatibus/flake8-airflow/actions/workflows/ci.yaml/badge.svg)](https://github.com/bradleybonitatibus/flake8-airflow/actions/workflows/ci.yaml)
+[![PyPI version](https://badge.fury.io/py/flake8-airflow.svg)](https://badge.fury.io/py/flake8-airflow)
 
-An opinioned `flake8` plugin for Apache Airflow.
+An opinioned `flake8` plugin with Apache Airflow rules.
+
+## Installing
+
+You can install this extension from `pypi` using
+```
+pip install flake8-airflow
+```
 
 ## Rules
 

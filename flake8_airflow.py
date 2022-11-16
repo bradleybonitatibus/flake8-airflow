@@ -12,7 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Flake8 extension for Apache Airflow code."""
+"""Flake8 extension for Apache Airflow code.
+
+The main purpose of having flake8 rules specific to Apache Airflow code
+is to constrain the use of some not so nice behaviours.
+
+For example, SubDags have been deprecated, and before, were an anti-pattern that
+caused issues like deadlocks.
+
+Another example is BashOperators, which don't escape shell commands,
+and can potentially run arbitrary code outside the Airflow process.
+"""
 from __future__ import annotations
 
 import ast
