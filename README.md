@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/bradleybonitatibus/flake8-airflow/actions/workflows/ci.yaml/badge.svg)](https://github.com/bradleybonitatibus/flake8-airflow/actions/workflows/ci.yaml)
 [![PyPI version](https://badge.fury.io/py/flake8-airflow.svg)](https://badge.fury.io/py/flake8-airflow)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6705/badge)](https://bestpractices.coreinfrastructure.org/projects/6705)
 
 An opinioned `flake8` plugin with Apache Airflow rules.
 
