@@ -26,18 +26,18 @@ and can potentially run arbitrary code outside the Airflow process.
 from __future__ import annotations
 
 import ast
-from typing import Generator, Any, List
+from typing import Generator, Any
 
 AA101 = "AA101 `SubDagOperator` used, should use TaskGroups instead"
 AA102 = "AA102 `BashOperator` used, potential security risk"
 AA103 = "AA103 `retries` argument missing from `DAG` `default_args` constructor"
 
 
-def contains_key(keys: List[ast.Constant], key: str) -> bool:
+def contains_key(keys: list[ast.Constant], key: str) -> bool:
     """Check ast constants for seeing if a key exists.
 
     Args:
-        keys (typing.List[ast.Constant]): Keys from Keywords
+        keys (list[ast.Constant]): Keys from Keywords
         key (str): Key looking for
 
     Returns:
@@ -87,8 +87,7 @@ class Visitor(ast.NodeVisitor):
         """
         n: ast.Name = node.func
         if n.id == "DAG":
-            kw: List[ast.keyword] = node.keywords
-            for k in kw:
+            for k in node.keywords:
                 if "default_args" in k.arg and not contains_key(
                     k.value.keys, "retries"
                 ):
