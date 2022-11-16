@@ -1,6 +1,4 @@
-apache-airflow>=2.4
+apache-airflow>=2.0
 flake8>=5.0
-pip-tools
 pytest~=7.1
 pytest-cov~=4.0
-tox==4.0.0b2

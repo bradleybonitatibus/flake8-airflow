@@ -88,12 +88,21 @@ with DAG(
 
 
 def test_sub_dag_returns_errors(subdag_fixture) -> None:
-    assert len(result(subdag_fixture)) == 1
+    res = result(subdag_fixture)
+    assert len(res) == 1
+    res = res.pop()
+    assert "AA101" in res
 
 
 def test_missing_retries_errors(missing_retries_fixture) -> None:
-    assert len(result(missing_retries_fixture)) == 1
+    res = result(missing_retries_fixture)
+    assert len(res) == 1
+    res = res.pop()
+    assert "AA103" in res
 
 
 def test_bash_operators_returns_errors(bash_operator_fixture) -> None:
-    assert len(result(bash_operator_fixture)) == 1
+    res = result(bash_operator_fixture)
+    assert len(res) == 1
+    res = res.pop()
+    assert "AA102" in res
